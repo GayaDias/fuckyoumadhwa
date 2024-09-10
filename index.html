@@ -8,58 +8,53 @@
         body {
             background-color: #ffecf3; /* Softer pastel pink background */
             font-family: 'Comic Sans MS', 'Bubblegum Sans', cursive;
+            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
             overflow: hidden;
-            position: relative;
         }
 
         .container {
             text-align: center;
-            position: relative;
             width: 90%;
-            max-width: 600px; /* Limits the width for larger screens */
+            max-width: 400px; /* Adjusted max width for smaller screens */
+            position: relative;
         }
 
         .main-image {
-            max-width: 60%; /* Adjust the image size for mobile */
+            width: 100%; /* Full width on mobile */
+            max-width: 200px; /* Limits size on larger screens */
             height: auto;
-            margin-bottom: 20px;
-            border-radius: 15px;
+            margin: 0 auto 20px;
             display: block;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .content {
             background: #fff0f5;
-            padding: 40px;
+            padding: 20px;
             border: 5px dashed #ff99cc;
-            text-align: center;
             box-shadow: 0 0 20px rgba(255, 182, 193, 0.4);
             border-radius: 30px;
-            display: inline-block;
-            width: 100%; /* Ensure the content box fits well on smaller screens */
+            margin: 0 auto;
+            max-width: 300px; /* Ensures the box fits well on mobile */
         }
 
         h2, h1 {
-            font-size: 4vw; /* Responsive font size */
+            font-size: 6vw; /* Responsive font size */
             color: #ff66b2;
-            margin: 0;
-            padding-bottom: 20px;
+            margin: 0 0 15px;
         }
 
         button {
             background-color: #ffb6c1;
             color: white;
-            padding: 12px 24px;
+            padding: 10px;
             border: none;
             border-radius: 20px;
             cursor: pointer;
-            font-size: 4vw; /* Responsive button text */
+            font-size: 5vw; /* Responsive button text */
             margin: 10px;
             transition: transform 0.2s, background-color 0.3s;
         }
@@ -70,19 +65,20 @@
         }
 
         .back-button {
-            position: fixed; /* Fixed position to always be visible */
+            position: fixed;
             bottom: 20px;
             left: 20px;
             background-color: #ffb6c1;
+            border: none;
             border-radius: 20px;
-            font-size: 4vw;
-            padding: 10px 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: none; /* Initially hidden */
+            font-size: 5vw; /* Smaller on mobile */
+            padding: 10px 15px;
+            display: none;
         }
 
         .response-image {
-            max-width: 80%; /* Make images larger on mobile */
+            width: 100%; /* Full width for images on mobile */
+            max-width: 250px; /* Limits image size on larger screens */
             height: auto;
             margin: 20px 0;
             border-radius: 15px;
@@ -91,7 +87,7 @@
         @media only screen and (min-width: 768px) {
             /* Adjustments for larger screens */
             .main-image {
-                max-width: 30%;
+                max-width: 150px;
             }
 
             .back-button {
@@ -103,11 +99,7 @@
             }
 
             h2, h1 {
-                font-size: 30px;
-            }
-
-            .content {
-                width: auto;
+                font-size: 24px;
             }
         }
     </style>
