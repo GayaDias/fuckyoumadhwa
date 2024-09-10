@@ -19,71 +19,96 @@
 
         .container {
             text-align: center;
+            position: relative;
+            width: 90%;
+            max-width: 600px; /* Limits the width for larger screens */
         }
 
         .main-image {
-            max-width: 30%; /* Make the image smaller */
+            max-width: 60%; /* Adjust the image size for mobile */
             height: auto;
             margin-bottom: 20px;
-            border-radius: 15px; /* Rounded corners for the image */
+            border-radius: 15px;
             display: block;
             margin-left: auto;
-            margin-right: auto; /* Center the image horizontally */
+            margin-right: auto;
         }
 
         .content {
-            background: #fff0f5; /* Light pink content box */
+            background: #fff0f5;
             padding: 40px;
-            border: 5px dashed #ff99cc; /* Dashed border for a cute effect */
+            border: 5px dashed #ff99cc;
             text-align: center;
-            box-shadow: 0 0 20px rgba(255, 182, 193, 0.4); /* Soft pink shadow */
-            border-radius: 30px; /* Rounded corners */
-            z-index: 10;
-            position: relative;
+            box-shadow: 0 0 20px rgba(255, 182, 193, 0.4);
+            border-radius: 30px;
             display: inline-block;
+            width: 100%; /* Ensure the content box fits well on smaller screens */
         }
 
         h2, h1 {
-            font-size: 30px; /* Bigger and bolder text */
-            color: #ff66b2; /* Bright pink text color */
+            font-size: 4vw; /* Responsive font size */
+            color: #ff66b2;
             margin: 0;
             padding-bottom: 20px;
         }
 
         button {
-            background-color: #ffb6c1; /* Light pink button color */
+            background-color: #ffb6c1;
             color: white;
-            padding: 15px 35px;
+            padding: 12px 24px;
             border: none;
-            border-radius: 20px; /* Rounded buttons for a softer look */
+            border-radius: 20px;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 4vw; /* Responsive button text */
             margin: 10px;
             transition: transform 0.2s, background-color 0.3s;
         }
 
         button:hover {
             transform: scale(1.1);
-            background-color: #ff69b4; /* Darker pink on hover */
+            background-color: #ff69b4;
         }
 
         .back-button {
-            position: absolute;
+            position: fixed; /* Fixed position to always be visible */
             bottom: 20px;
-            left: 20px; /* Positioned in the bottom-left corner */
-            display: none; /* Initially hidden */
+            left: 20px;
             background-color: #ffb6c1;
             border-radius: 20px;
-            font-size: 18px;
+            font-size: 4vw;
             padding: 10px 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: none; /* Initially hidden */
         }
 
         .response-image {
-            max-width: 50%;
+            max-width: 80%; /* Make images larger on mobile */
             height: auto;
             margin: 20px 0;
             border-radius: 15px;
+        }
+
+        @media only screen and (min-width: 768px) {
+            /* Adjustments for larger screens */
+            .main-image {
+                max-width: 30%;
+            }
+
+            .back-button {
+                font-size: 18px; /* Adjust font size for larger screens */
+            }
+
+            button {
+                font-size: 18px;
+            }
+
+            h2, h1 {
+                font-size: 30px;
+            }
+
+            .content {
+                width: auto;
+            }
         }
     </style>
 </head>
